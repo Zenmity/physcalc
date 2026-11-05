@@ -17,7 +17,7 @@ let displacementsArray;
 let trial1arr;
 let trial2arr;
 let trial3arr;
-let avgarr
+let avgarr = [];
 
 let firstLine;
 let secondLine;
