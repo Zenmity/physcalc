@@ -45,6 +45,7 @@ function promptValues() {
   trial2arr = arrayify(thirdLine, true);
   trial3arr = arrayify(fourthLine, true);
 
+  avgarr = []
   for (let i = 0; i < displacementsArray.length; i++) {
     let count = 3
     let x = 0
