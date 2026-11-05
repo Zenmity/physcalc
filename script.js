@@ -116,19 +116,21 @@ function getAcceleration() {
     </thead>
     <tbody>
       <tr>
-        <th scope="row">Trial 1</th>
-        <td>${compiledArray[1][0]}</td>
+      <th scope="row">Trial 1</th>
+      <td>${compiledArray[1][0]}</td>
         <td>${compiledArray[1][1]}</td>
         <td>${compiledArray[1][2]}</td>
         <td>${compiledArray[1][3]}</td>
       </tr>
       <tr>
+      <th scope="row">Trial 2</th>
         <td>${compiledArray[2][0]}</td>
         <td>${compiledArray[2][1]}</td>
         <td>${compiledArray[2][2]}</td>
         <td>${compiledArray[2][3]}</td>
       </tr>
       <tr>
+      <th scope="row">Trial 3</th>
         <td>${compiledArray[3][0]}</td>
         <td>${compiledArray[3][1]}</td>
         <td>${compiledArray[3][2]}</td>
