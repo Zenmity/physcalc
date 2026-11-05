@@ -23,6 +23,8 @@ let secondLine;
 let thirdLine;
 let fourthLine;
 
+let html = ""
+
 function promptValues() {
   firstLine = prompt("Displacements (cm) (value1, value2,...)");
   if (firstLine === "test") {
@@ -86,7 +88,8 @@ function getAcceleration() {
     }
   }
   for (let i = 0; i < displacementsArray.length; i++) {
-  displacementsArray[i] *= 100 }
+    displacementsArray[i] *= 100
+  }
   const compiledArray = [displacementsArray];
   for (let i = 0; i < accelArrays.length; i++) {
     compiledArray.push(accelArrays[i]);
@@ -99,6 +102,42 @@ function getAcceleration() {
       console.log(`Trial ${i}:                ` + arr);
     }
   }
+
+  let tag = `<hr>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">${compiledArray[0][0]}</th>
+        <th scope="col">${compiledArray[0][1]}</th>
+        <th scope="col">${compiledArray[0][2]}</th>
+        <th scope="col">${compiledArray[0][3]}</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Trial 1</th>
+        <td>${compiledArray[1][0]}</td>
+        <td>${compiledArray[1][1]}</td>
+        <td>${compiledArray[1][2]}</td>
+        <td>${compiledArray[1][3]}</td>
+      </tr>
+      <tr>
+        <td>${compiledArray[2][0]}</td>
+        <td>${compiledArray[2][1]}</td>
+        <td>${compiledArray[2][2]}</td>
+        <td>${compiledArray[2][3]}</td>
+      </tr>
+      <tr>
+        <td>${compiledArray[3][0]}</td>
+        <td>${compiledArray[3][1]}</td>
+        <td>${compiledArray[3][2]}</td>
+        <td>${compiledArray[3][3]}</td>
+      </tr>
+    </tbody>
+  </table>`
+  
+  html += tag
+  document.getElementById("table").innerHTML = html
   return compiledArray
 }
 
@@ -107,6 +146,7 @@ let firstMessage = true;
 document.getElementById("accel").addEventListener("click", () => {
   if (!firstMessage) {
     console.log("=========================================");
+    html
   } else {
     firstMessage = false;
   }
