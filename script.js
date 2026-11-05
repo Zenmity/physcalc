@@ -44,12 +44,12 @@ function promptValues() {
   trial1arr = arrayify(secondLine, true);
   trial2arr = arrayify(thirdLine, true);
   trial3arr = arrayify(fourthLine, true);
-  let x = 0
-  let y = 0
-  let z = 0
 
   for (let i = 0; i < displacementsArray.length; i++) {
     let count = 3
+    let x = 0
+    let y = 0
+    let z = 0
     if (!isNaN(trial1arr[i])) {
       x = trial1arr[i]
     } else {
@@ -65,7 +65,11 @@ function promptValues() {
     } else {
       count--
     }
-    avgarr.push((x + y + z) / count)
+    if (count > 0) {
+      avgarr.push((x + y + z) / count)
+    } else {
+      avgarr.push("N/A")
+    }
   }
 }
 
@@ -145,7 +149,7 @@ function getAcceleration() {
     <tbody>
       <tr>
       <th scope="row">Trial 1</th>
-      <td scope="col">${compiledArray[1][0]}</td>
+        <td scope="col">${compiledArray[1][0]}</td>
         <td scope="col">${compiledArray[1][1]}</td>
         <td scope="col">${compiledArray[1][2]}</td>
         <td scope="col">${compiledArray[1][3]}</td>
