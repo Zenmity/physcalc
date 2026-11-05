@@ -107,6 +107,7 @@ function getAcceleration() {
   <table>
     <thead>
       <tr>
+        <th scope="col"></th>
         <th scope="col">${compiledArray[0][0]}</th>
         <th scope="col">${compiledArray[0][1]}</th>
         <th scope="col">${compiledArray[0][2]}</th>
