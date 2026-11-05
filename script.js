@@ -99,6 +99,7 @@ function getAcceleration() {
       console.log(`Trial ${i}:                ` + arr);
     }
   }
+  return compiledArray
 }
 
 let firstMessage = true;
