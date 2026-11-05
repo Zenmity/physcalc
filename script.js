@@ -47,25 +47,25 @@ function promptValues() {
   let x = 0
   let y = 0
   let z = 0
-  
+
   for (let i = 0; i < displacementsArray.length; i++) {
-    let count = 0
-    if(!isNaN(trial1arr[i])) {
+    let count = 3
+    if (!isNaN(trial1arr[i])) {
       x = trial1arr[i]
     } else {
       count--
     }
-    if(!isNaN(trial2arr[i])) {
+    if (!isNaN(trial2arr[i])) {
       y = trial2arr[i]
     } else {
       count--
     }
-    if(!isNaN(trial3arr[i])) {
+    if (!isNaN(trial3arr[i])) {
       z = trial3arr[i]
     } else {
       count--
     }
-    avgarr.push((x+y+z)/count)
+    avgarr.push((x + y + z) / count)
   }
 }
 
@@ -85,10 +85,10 @@ function getAcceleration() {
   let accelThird = [];
   let accelAvg = []
 
-  let trialArrays = [trial1arr, trial2arr, trial3arr,avgarr];
-  let veloArrays = [veloFirst, veloSecond, veloThird,veloAvg];
-  let finalArrays = [finalFirst, finalSecond, finalThird,finalAvg];
-  let accelArrays = [accelFirst, accelSecond, accelThird,accelAvg];
+  let trialArrays = [trial1arr, trial2arr, trial3arr, avgarr];
+  let veloArrays = [veloFirst, veloSecond, veloThird, veloAvg];
+  let finalArrays = [finalFirst, finalSecond, finalThird, finalAvg];
+  let accelArrays = [accelFirst, accelSecond, accelThird, accelAvg];
 
   for (let i = 0; i < displacementsArray.length; i++) {
     for (let j = 0; j < trialArrays.length; j++) {
@@ -173,7 +173,7 @@ function getAcceleration() {
       </tr>
     </tbody>
   </table>`
-  
+
   html += tag
   document.getElementById("table").innerHTML = html
   return compiledArray
