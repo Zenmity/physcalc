@@ -17,6 +17,7 @@ let displacementsArray;
 let trial1arr;
 let trial2arr;
 let trial3arr;
+let avgarr
 
 let firstLine;
 let secondLine;
@@ -43,25 +44,51 @@ function promptValues() {
   trial1arr = arrayify(secondLine, true);
   trial2arr = arrayify(thirdLine, true);
   trial3arr = arrayify(fourthLine, true);
+  let x = 0
+  let y = 0
+  let z = 0
+  
+  for (let i = 0; i < displacementsArray.length; i++) {
+    let count = 0
+    if(!isNaN(trial1arr[i])) {
+      x = trial1arr[i]
+    } else {
+      count--
+    }
+    if(!isNaN(trial2arr[i])) {
+      y = trial2arr[i]
+    } else {
+      count--
+    }
+    if(!isNaN(trial3arr[i])) {
+      z = trial3arr[i]
+    } else {
+      count--
+    }
+    avgarr.push((x+y+z)/count)
+  }
 }
 
 function getAcceleration() {
   let veloFirst = [];
   let veloSecond = [];
   let veloThird = [];
+  let veloAvg = []
 
   let finalFirst = [];
   let finalSecond = [];
   let finalThird = [];
+  let finalAvg = []
 
   let accelFirst = [];
   let accelSecond = [];
   let accelThird = [];
+  let accelAvg = []
 
-  let trialArrays = [trial1arr, trial2arr, trial3arr];
-  let veloArrays = [veloFirst, veloSecond, veloThird];
-  let finalArrays = [finalFirst, finalSecond, finalThird];
-  let accelArrays = [accelFirst, accelSecond, accelThird];
+  let trialArrays = [trial1arr, trial2arr, trial3arr,avgarr];
+  let veloArrays = [veloFirst, veloSecond, veloThird,veloAvg];
+  let finalArrays = [finalFirst, finalSecond, finalThird,finalAvg];
+  let accelArrays = [accelFirst, accelSecond, accelThird,accelAvg];
 
   for (let i = 0; i < displacementsArray.length; i++) {
     for (let j = 0; j < trialArrays.length; j++) {
@@ -112,29 +139,37 @@ function getAcceleration() {
         <th scope="col">${compiledArray[0][1]}</th>
         <th scope="col">${compiledArray[0][2]}</th>
         <th scope="col">${compiledArray[0][3]}</th>
+        <th scope="col">${compiledArray[0][4]}</th>
     </tr>
     </thead>
     <tbody>
       <tr>
       <th scope="row">Trial 1</th>
-      <td>${compiledArray[1][0]}</td>
-        <td>${compiledArray[1][1]}</td>
-        <td>${compiledArray[1][2]}</td>
-        <td>${compiledArray[1][3]}</td>
+      <td scope="col">${compiledArray[1][0]}</td>
+        <td scope="col">${compiledArray[1][1]}</td>
+        <td scope="col">${compiledArray[1][2]}</td>
+        <td scope="col">${compiledArray[1][3]}</td>
       </tr>
       <tr>
       <th scope="row">Trial 2</th>
-        <td>${compiledArray[2][0]}</td>
-        <td>${compiledArray[2][1]}</td>
-        <td>${compiledArray[2][2]}</td>
-        <td>${compiledArray[2][3]}</td>
+        <td scope="col">${compiledArray[2][0]}</td>
+        <td scope="col">${compiledArray[2][1]}</td>
+        <td scope="col">${compiledArray[2][2]}</td>
+        <td scope="col">${compiledArray[2][3]}</td>
       </tr>
       <tr>
       <th scope="row">Trial 3</th>
-        <td>${compiledArray[3][0]}</td>
-        <td>${compiledArray[3][1]}</td>
-        <td>${compiledArray[3][2]}</td>
-        <td>${compiledArray[3][3]}</td>
+        <td scope="col">${compiledArray[3][0]}</td>
+        <td scope="col">${compiledArray[3][1]}</td>
+        <td scope="col">${compiledArray[3][2]}</td>
+        <td scope="col">${compiledArray[3][3]}</td>
+      </tr>
+      <tr>
+      <th scope="row">Average</th>
+        <td scope="col">${compiledArray[4][0]}</td>
+        <td scope="col">${compiledArray[4][1]}</td>
+        <td scope="col">${compiledArray[4][2]}</td>
+        <td scope="col">${compiledArray[4][3]}</td>
       </tr>
     </tbody>
   </table>`
