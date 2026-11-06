@@ -1,0 +1,17 @@
+:root {
+  --grayish: #615f5f;
+}
+
+h1 {
+  font-family: "Mea Culpa", cursive;
+  font-size: calc(100vh / 20);
+}
+
+ul {
+  font-family: "Inter", sans-serif;
+  font-weight: bolder;
+}
+
+button {
+  height: calc(50vh / 20);
+}
