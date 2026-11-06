@@ -7,9 +7,10 @@ h1 {
   font-size: calc(100vh / 20);
 }
 
-ul {
+ul a {
   font-family: "Inter", sans-serif;
   font-weight: bolder;
+  color: var(--grayish);
 }
 
 button {
