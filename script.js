@@ -1,5 +1,15 @@
-let displacement;
-let time;
+let displacementsArray;
+let trial1arr;
+let trial2arr;
+let trial3arr;
+let avgarr = [];
+
+let firstLine;
+let secondLine;
+let thirdLine;
+let fourthLine;
+
+let html = "";
 
 function arrayify(string, tf) {
   let newArray;
@@ -12,19 +22,6 @@ function arrayify(string, tf) {
   }
   return newArray;
 }
-
-let displacementsArray;
-let trial1arr;
-let trial2arr;
-let trial3arr;
-let avgarr = [];
-
-let firstLine;
-let secondLine;
-let thirdLine;
-let fourthLine;
-
-let html = ""
 
 function promptValues() {
   firstLine = prompt("Displacements (cm) (value1, value2,...)");
@@ -45,31 +42,31 @@ function promptValues() {
   trial2arr = arrayify(thirdLine, true);
   trial3arr = arrayify(fourthLine, true);
 
-  avgarr = []
+  avgarr = [];
   for (let i = 0; i < displacementsArray.length; i++) {
-    let count = 3
-    let x = 0
-    let y = 0
-    let z = 0
+    let count = 3;
+    let x = 0;
+    let y = 0;
+    let z = 0;
     if (!isNaN(trial1arr[i])) {
-      x = trial1arr[i]
+      x = trial1arr[i];
     } else {
-      count--
+      count--;
     }
     if (!isNaN(trial2arr[i])) {
-      y = trial2arr[i]
+      y = trial2arr[i];
     } else {
-      count--
+      count--;
     }
     if (!isNaN(trial3arr[i])) {
-      z = trial3arr[i]
+      z = trial3arr[i];
     } else {
-      count--
+      count--;
     }
     if (count > 0) {
-      avgarr.push((x + y + z) / count)
+      avgarr.push((x + y + z) / count);
     } else {
-      avgarr.push("N/A")
+      avgarr.push("N/A");
     }
   }
 }
@@ -78,17 +75,17 @@ function getAcceleration() {
   let veloFirst = [];
   let veloSecond = [];
   let veloThird = [];
-  let veloAvg = []
+  let veloAvg = [];
 
   let finalFirst = [];
   let finalSecond = [];
   let finalThird = [];
-  let finalAvg = []
+  let finalAvg = [];
 
   let accelFirst = [];
   let accelSecond = [];
   let accelThird = [];
-  let accelAvg = []
+  let accelAvg = [];
 
   let trialArrays = [trial1arr, trial2arr, trial3arr, avgarr];
   let veloArrays = [veloFirst, veloSecond, veloThird, veloAvg];
@@ -120,7 +117,7 @@ function getAcceleration() {
     }
   }
   for (let i = 0; i < displacementsArray.length; i++) {
-    displacementsArray[i] *= 100
+    displacementsArray[i] *= 100;
   }
   const compiledArray = [displacementsArray];
   for (let i = 0; i < accelArrays.length; i++) {
@@ -176,11 +173,11 @@ function getAcceleration() {
         <td scope="col">${compiledArray[4][3]}</td>
       </tr>
     </tbody>
-  </table>`
+  </table>`;
 
-  html += tag
-  document.getElementById("table").innerHTML = html
-  return compiledArray
+  html += tag;
+  document.getElementById("table").innerHTML = html;
+  return compiledArray;
 }
 
 let firstMessage = true;
@@ -188,7 +185,7 @@ let firstMessage = true;
 document.getElementById("accel").addEventListener("click", () => {
   if (!firstMessage) {
     console.log("=========================================");
-    html
+    html;
   } else {
     firstMessage = false;
   }
