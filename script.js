@@ -217,40 +217,40 @@ function getAcceleration() {
     <thead>
       <tr>
         <th scope="col">Average Velocity</th>
-        <th scope="col">${avgVelo[0][0]}</th>
-        <th scope="col">${avgVelo[0][1]}</th>
-        <th scope="col">${avgVelo[0][2]}</th>
-        <th scope="col">${avgVelo[0][3]}</th>
+        <th scope="col">${veloArrays[0][0]}</th>
+        <th scope="col">${veloArrays[0][1]}</th>
+        <th scope="col">${veloArrays[0][2]}</th>
+        <th scope="col">${veloArrays[0][3]}</th>
     </tr>
     </thead>
     <tbody>
       <tr>
       <th scope="row">Trial 1</th>
-        <td scope="col">${avgVelo[1][0]}</td>
-        <td scope="col">${avgVelo[1][1]}</td>
-        <td scope="col">${avgVelo[1][2]}</td>
-        <td scope="col">${avgVelo[1][3]}</td>
+        <td scope="col">${veloArrays[1][0]}</td>
+        <td scope="col">${veloArrays[1][1]}</td>
+        <td scope="col">${veloArrays[1][2]}</td>
+        <td scope="col">${veloArrays[1][3]}</td>
       </tr>
       <tr>
       <th scope="row">Trial 2</th>
-        <td scope="col">${avgVelo[2][0]}</td>
-        <td scope="col">${avgVelo[2][1]}</td>
-        <td scope="col">${avgVelo[2][2]}</td>
-        <td scope="col">${avgVelo[2][3]}</td>
+        <td scope="col">${veloArrays[2][0]}</td>
+        <td scope="col">${veloArrays[2][1]}</td>
+        <td scope="col">${veloArrays[2][2]}</td>
+        <td scope="col">${veloArrays[2][3]}</td>
       </tr>
       <tr>
       <th scope="row">Trial 3</th>
-        <td scope="col">${avgVelo[3][0]}</td>
-        <td scope="col">${avgVelo[3][1]}</td>
-        <td scope="col">${avgVelo[3][2]}</td>
-        <td scope="col">${avgVelo[3][3]}</td>
+        <td scope="col">${veloArrays[3][0]}</td>
+        <td scope="col">${veloArrays[3][1]}</td>
+        <td scope="col">${veloArrays[3][2]}</td>
+        <td scope="col">${veloArrays[3][3]}</td>
       </tr>
       <tr>
       <th scope="row">Average</th>
-        <td scope="col">${avgVelo[4][0]}</td>
-        <td scope="col">${avgVelo[4][1]}</td>
-        <td scope="col">${avgVelo[4][2]}</td>
-        <td scope="col">${avgVelo[4][3]}</td>
+        <td scope="col">${veloArrays[4][0]}</td>
+        <td scope="col">${veloArrays[4][1]}</td>
+        <td scope="col">${veloArrays[4][2]}</td>
+        <td scope="col">${veloArrays[4][3]}</td>
       </tr>
     </tbody>
   </table>`;
