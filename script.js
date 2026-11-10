@@ -136,7 +136,7 @@ function getAcceleration() {
   <table>
     <thead>
       <tr>
-        <th scope="col"></th>
+        <th scope="col">Acceleration</th>
         <th scope="col">${compiledArray[0][0]}</th>
         <th scope="col">${compiledArray[0][1]}</th>
         <th scope="col">${compiledArray[0][2]}</th>
@@ -171,6 +171,86 @@ function getAcceleration() {
         <td scope="col">${compiledArray[4][1]}</td>
         <td scope="col">${compiledArray[4][2]}</td>
         <td scope="col">${compiledArray[4][3]}</td>
+      </tr>
+    </tbody>
+  </table><table>
+    <thead>
+      <tr>
+        <th scope="col">Final Velocity</th>
+        <th scope="col">${finalArrays[0][0]}</th>
+        <th scope="col">${finalArrays[0][1]}</th>
+        <th scope="col">${finalArrays[0][2]}</th>
+        <th scope="col">${finalArrays[0][3]}</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <th scope="row">Trial 1</th>
+        <td scope="col">${finalArrays[1][0]}</td>
+        <td scope="col">${finalArrays[1][1]}</td>
+        <td scope="col">${finalArrays[1][2]}</td>
+        <td scope="col">${finalArrays[1][3]}</td>
+      </tr>
+      <tr>
+      <th scope="row">Trial 2</th>
+        <td scope="col">${finalArrays[2][0]}</td>
+        <td scope="col">${finalArrays[2][1]}</td>
+        <td scope="col">${finalArrays[2][2]}</td>
+        <td scope="col">${finalArrays[2][3]}</td>
+      </tr>
+      <tr>
+      <th scope="row">Trial 3</th>
+        <td scope="col">${finalArrays[3][0]}</td>
+        <td scope="col">${finalArrays[3][1]}</td>
+        <td scope="col">${finalArrays[3][2]}</td>
+        <td scope="col">${finalArrays[3][3]}</td>
+      </tr>
+      <tr>
+      <th scope="row">Average</th>
+        <td scope="col">${finalArrays[4][0]}</td>
+        <td scope="col">${finalArrays[4][1]}</td>
+        <td scope="col">${finalArrays[4][2]}</td>
+        <td scope="col">${finalArrays[4][3]}</td>
+      </tr>
+    </tbody>
+  </table><table>
+    <thead>
+      <tr>
+        <th scope="col">Average Velocity</th>
+        <th scope="col">${avgVelo[0][0]}</th>
+        <th scope="col">${avgVelo[0][1]}</th>
+        <th scope="col">${avgVelo[0][2]}</th>
+        <th scope="col">${avgVelo[0][3]}</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <th scope="row">Trial 1</th>
+        <td scope="col">${avgVelo[1][0]}</td>
+        <td scope="col">${avgVelo[1][1]}</td>
+        <td scope="col">${avgVelo[1][2]}</td>
+        <td scope="col">${avgVelo[1][3]}</td>
+      </tr>
+      <tr>
+      <th scope="row">Trial 2</th>
+        <td scope="col">${avgVelo[2][0]}</td>
+        <td scope="col">${avgVelo[2][1]}</td>
+        <td scope="col">${avgVelo[2][2]}</td>
+        <td scope="col">${avgVelo[2][3]}</td>
+      </tr>
+      <tr>
+      <th scope="row">Trial 3</th>
+        <td scope="col">${avgVelo[3][0]}</td>
+        <td scope="col">${avgVelo[3][1]}</td>
+        <td scope="col">${avgVelo[3][2]}</td>
+        <td scope="col">${avgVelo[3][3]}</td>
+      </tr>
+      <tr>
+      <th scope="row">Average</th>
+        <td scope="col">${avgVelo[4][0]}</td>
+        <td scope="col">${avgVelo[4][1]}</td>
+        <td scope="col">${avgVelo[4][2]}</td>
+        <td scope="col">${avgVelo[4][3]}</td>
       </tr>
     </tbody>
   </table>`;
